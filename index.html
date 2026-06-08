@@ -2247,8 +2247,8 @@ window.addEventListener('load',()=>{
   // =====================================================
   // 2. CONFIGURACIÓN - PON AQUÍ TUS CLAVES
   // =====================================================
-  const SUPABASE_URL = 'https://zpseipfypcxktbbrbkiq.supabase.co';  // ← TU URL
-  const SUPABASE_ANON_KEY ='eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpwc2VpcGZ5cGN4a3RiYnJia2lxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NDk4MzIsImV4cCI6MjA5NjUyNTgzMn0.RDrY9_gnSqsZgnaWx0FF6gHHNG8ry--ETmAmCHAN024';                 // ← TU KEY
+  const SUPABASE_URL = 'https://zpseipfypcxktbbrbkiq.supabase.co';
+  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpwc2VpcGZ5cGN4a3RiYnJia2lxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NDk4MzIsImV4cCI6MjA5NjUyNTgzMn0.RDrY9_gnSqsZgnaWx0FF6gHHNG8ry--ETmAmCHAN024';
   
   const supabase = supabaseJs.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   
@@ -2260,11 +2260,8 @@ window.addEventListener('load',()=>{
     
     if (user) {
       console.log('Usuario logueado:', user.email);
-      // Mostrar nombre en la interfaz
       const userElement = document.getElementById('usuario-nombre');
       if (userElement) userElement.textContent = user.email;
-      
-      // Cargar su progreso guardado
       cargarProgresoUsuario(user.id);
     } else {
       console.log('Usuario no logueado');
@@ -2286,7 +2283,6 @@ window.addEventListener('load',()=>{
       return;
     }
     
-    // Actualizar las barras de progreso en la página
     data.forEach(modulo => {
       const elementoProgreso = document.querySelector(`[data-modulo="${modulo.modulo_nombre}"]`);
       if (elementoProgreso) {
@@ -2397,22 +2393,13 @@ window.addEventListener('load',()=>{
   }
   
   // =====================================================
-  // 10. EJEMPLO: Guardar progreso cuando el usuario completa un módulo
-  // =====================================================
-  // Llama a esta función cuando el usuario termine un módulo:
-  // guardarProgreso('Microsoft Office', 100, true);
-  
-  // Llama a esta función cuando el usuario termine un examen:
-  // guardarResultadoExamen('psicometrico', 85, {pregunta1: 'respuesta1'});
-  
-  // =====================================================
   // INICIAR: Verificar usuario al cargar la página
   // =====================================================
   document.addEventListener('DOMContentLoaded', checkUser);
   
-</script>     
+</script>
 
-<!-- CONTENEDOR DEL LOGIN - DEBE ESTAR DENTRO DEL BODY -->
+<!-- CONTENEDOR DEL LOGIN -->
 <div style="position: fixed; top: 10px; right: 10px; background: white; padding: 10px 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 9999;">
   <div id="login-container"></div>
   <span id="usuario-nombre" style="font-size: 12px; color: #666;"></span>
