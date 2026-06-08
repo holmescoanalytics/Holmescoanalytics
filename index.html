@@ -2240,5 +2240,181 @@ window.addEventListener('load',()=>{
   setTimeout(()=>showNotif('🇸🇻 ¡Bienvenido a ProHR El Salvador!'),1000);
 });
 </script>
+<!-- 1. Cargar la librería de Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+<script>
+  // =====================================================
+  // 2. CONFIGURACIÓN - PON AQUÍ TUS CLAVES
+  // =====================================================
+  const SUPABASE_URL = 'https://zpseipfypcxktbbrbkiq.supabase.co/rest/v1/';  // ← TU URL
+  const SUPABASE_ANON_KEY = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpwc2VpcGZ5cGN4a3RiYnJia2lxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NDk4MzIsImV4cCI6MjA5NjUyNTgzMn0.RDrY9_gnSqsZgnaWx0FF6gHHNG8ry--ETmAmCHAN024;                 // ← TU KEY
+  
+  const supabase = supabaseJs.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+  
+  // =====================================================
+  // 3. FUNCIÓN PARA VERIFICAR SI EL USUARIO ESTA LOGUEADO
+  // =====================================================
+  async function checkUser() {
+    const { data: { user } } = await supabase.auth.getUser();
+    
+    if (user) {
+      console.log('Usuario logueado:', user.email);
+      // Mostrar nombre en la interfaz
+      const userElement = document.getElementById('usuario-nombre');
+      if (userElement) userElement.textContent = user.email;
+      
+      // Cargar su progreso guardado
+      cargarProgresoUsuario(user.id);
+    } else {
+      console.log('Usuario no logueado');
+      mostrarBotonLogin();
+    }
+  }
+  
+  // =====================================================
+  // 4. FUNCIÓN PARA CARGAR PROGRESO GUARDADO
+  // =====================================================
+  async function cargarProgresoUsuario(userId) {
+    const { data, error } = await supabase
+      .from('progreso_modulos')
+      .select('*')
+      .eq('usuario_id', userId);
+    
+    if (error) {
+      console.error('Error cargando progreso:', error);
+      return;
+    }
+    
+    // Actualizar las barras de progreso en la página
+    data.forEach(modulo => {
+      const elementoProgreso = document.querySelector(`[data-modulo="${modulo.modulo_nombre}"]`);
+      if (elementoProgreso) {
+        elementoProgreso.style.width = `${modulo.porcentaje}%`;
+        elementoProgreso.textContent = `${modulo.porcentaje}%`;
+      }
+    });
+  }
+  
+  // =====================================================
+  // 5. FUNCIÓN PARA GUARDAR PROGRESO DE UN MÓDULO
+  // =====================================================
+  async function guardarProgreso(moduloNombre, porcentaje, completado) {
+    const { data: { user } } = await supabase.auth.getUser();
+    
+    if (!user) {
+      alert('Inicia sesión para guardar tu progreso');
+      return false;
+    }
+    
+    const { error } = await supabase
+      .from('progreso_modulos')
+      .upsert({
+        usuario_id: user.id,
+        modulo_nombre: moduloNombre,
+        porcentaje: porcentaje,
+        completado: completado,
+        ultima_actividad: new Date()
+      });
+    
+    if (error) {
+      console.error('Error guardando:', error);
+      return false;
+    }
+    
+    console.log(`✅ Progreso guardado: ${moduloNombre} - ${porcentaje}%`);
+    return true;
+  }
+  
+  // =====================================================
+  // 6. FUNCIÓN PARA GUARDAR RESULTADO DE EXAMEN
+  // =====================================================
+  async function guardarResultadoExamen(tipo, puntaje, respuestas) {
+    const { data: { user } } = await supabase.auth.getUser();
+    
+    if (!user) return false;
+    
+    const { error } = await supabase
+      .from('resultados_examenes')
+      .insert({
+        usuario_id: user.id,
+        tipo_examen: tipo,
+        puntaje: puntaje,
+        respuestas: respuestas
+      });
+    
+    if (error) {
+      console.error('Error guardando examen:', error);
+      return false;
+    }
+    
+    console.log(`✅ Examen guardado: ${tipo} - ${puntaje} puntos`);
+    return true;
+  }
+  
+  // =====================================================
+  // 7. FUNCIÓN PARA INICIAR SESIÓN CON GOOGLE
+  // =====================================================
+  async function loginConGoogle() {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: 'google',
+      options: {
+        redirectTo: window.location.href
+      }
+    });
+    
+    if (error) console.error('Error login:', error);
+  }
+  
+  // =====================================================
+  // 8. FUNCIÓN PARA CERRAR SESIÓN
+  // =====================================================
+  async function logout() {
+    await supabase.auth.signOut();
+    window.location.reload();
+  }
+  
+  // =====================================================
+  // 9. MOSTRAR BOTÓN DE LOGIN SI ES NECESARIO
+  // =====================================================
+  function mostrarBotonLogin() {
+    const loginContainer = document.getElementById('login-container');
+    if (loginContainer) {
+      loginContainer.innerHTML = `
+        <button onclick="loginConGoogle()" style="
+          background: #4285F4;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+        ">
+          🚀 Iniciar sesión con Google
+        </button>
+      `;
+    }
+  }
+  
+  // =====================================================
+  // 10. EJEMPLO: Guardar progreso cuando el usuario completa un módulo
+  // =====================================================
+  // Llama a esta función cuando el usuario termine un módulo:
+  // guardarProgreso('Microsoft Office', 100, true);
+  
+  // Llama a esta función cuando el usuario termine un examen:
+  // guardarResultadoExamen('psicometrico', 85, {pregunta1: 'respuesta1'});
+  
+  // =====================================================
+  // INICIAR: Verificar usuario al cargar la página
+  // =====================================================
+  document.addEventListener('DOMContentLoaded', checkUser);
+  
+</script>     
+ <div id="login-container"></div>
+ <div style="position: fixed; top: 10px; right: 10px; background: white; padding: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); z-index: 1000;">
+  <span id="usuario-nombre" style="margin-right: 10px;"></span>
+  <button onclick="logout()" style="background: #dc2626; color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;">Salir</button>
+</div>     
 </body>
 </html>
