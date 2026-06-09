@@ -32,6 +32,18 @@ export default async function handler(req, res) {
   if (req.method === "OPTIONS") {
     return res.status(204).end();
   }
+
+  // Diagnóstico temporal: GET dice si la key llega a la función (sin revelarla)
+  if (req.method === "GET") {
+    const k = process.env.ANTHROPIC_API_KEY || "";
+    return res.status(200).json({
+      keyPresent: k.length > 0,
+      keyLength: k.length,
+      startsWith: k.slice(0, 7),
+      node: process.version
+    });
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Método no permitido" });
   }
