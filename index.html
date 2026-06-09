@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ProHR El Salvador — Plan de Estudio Completo</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title>Watson — Capacitación y Certificación Profesional · El Salvador</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Syne:wght@600;700;800&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0a0f;--surface:#13131c;--surface2:#1a1a28;--surface3:#222236;--accent:#1a56db;--accent2:#ff6584;--accent3:#00c9a7;--accent4:#f7971e;--text:#e8e8f0;--text2:#9090b0;--border:rgba(26,86,219,0.2);--gold:#ffd700;}
+:root{--bg:#0a0e1a;--surface:#121829;--surface2:#1a2236;--surface3:#243049;--accent:#4d7cfe;--accent2:#ff6584;--accent3:#2dd4bf;--accent4:#e0a93a;--text:#eaecf5;--text2:#8b95b5;--border:rgba(77,124,254,0.18);--gold:#e0b34a;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden;}
 header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,10,15,0.95);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between;}
-.logo{font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:900;background:linear-gradient(135deg,#1a56db,#00c9a7);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.logo{font-family:'Syne',sans-serif;font-size:1.45rem;font-weight:800;letter-spacing:0.5px;background:linear-gradient(135deg,#5b86ff,#e0b34a);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
 .logo span{font-size:0.75rem;display:block;-webkit-text-fill-color:#9090b0;font-family:'DM Sans',sans-serif;font-weight:400;margin-top:-4px;}
 .header-right{display:flex;align-items:center;gap:1rem;font-size:0.8rem;color:var(--text2);}
 .xp-badge{background:linear-gradient(135deg,var(--gold),#ffa500);color:#000;padding:4px 12px;border-radius:20px;font-weight:700;font-size:0.78rem;}
@@ -30,13 +30,14 @@ main{margin-left:255px;flex:1;padding:2rem 2.5rem;max-width:1080px;}
 .page{display:none;animation:fadeIn 0.3s ease;}
 .page.active{display:block;}
 @keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
-.hero{background:linear-gradient(135deg,#0d1b3e,#0a2240);border:1px solid rgba(26,86,219,0.3);border-radius:20px;padding:2.5rem;margin-bottom:2rem;position:relative;overflow:hidden;}
-.hero::before{content:'🇸🇻';position:absolute;right:2rem;top:1.5rem;font-size:4rem;opacity:0.15;}
+.hero{background:linear-gradient(135deg,#101a36 0%,#0c1430 55%,#1a1422 100%);border:1px solid rgba(77,124,254,0.28);border-radius:20px;padding:2.5rem;margin-bottom:2rem;position:relative;overflow:hidden;}
+.hero::after{content:'';position:absolute;left:-40px;bottom:-60px;width:240px;height:240px;background:radial-gradient(circle,rgba(224,179,74,0.12),transparent 70%);pointer-events:none;}
+.hero::before{content:'🇸🇻';position:absolute;right:2rem;top:1.5rem;font-size:4rem;opacity:0.12;}
 .hero-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;line-height:1.2;margin-bottom:0.75rem;}
-.hero-title span{color:#4d9fff;}
+.hero-title span{color:#e0b34a;}
 .hero-sub{color:var(--text2);font-size:0.9rem;line-height:1.6;max-width:580px;}
 .hero-stats{display:flex;gap:2rem;margin-top:1.5rem;flex-wrap:wrap;}
-.hstat span{font-family:'DM Mono',monospace;font-size:1.8rem;color:#4d9fff;display:block;}
+.hstat span{font-family:'DM Mono',monospace;font-size:1.8rem;color:#5b86ff;display:block;}
 .hstat small{font-size:0.75rem;color:var(--text2);}
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem;}
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem;margin-bottom:1.25rem;}
@@ -67,7 +68,7 @@ main{margin-left:255px;flex:1;padding:2rem 2.5rem;max-width:1080px;}
 .tag.red{background:rgba(255,101,132,0.12);color:var(--accent2);border-color:rgba(255,101,132,0.3);}
 .tag.gold{background:rgba(255,215,0,0.12);color:var(--gold);border-color:rgba(255,215,0,0.3);}
 .explain-block{background:var(--surface2);border-radius:10px;border-left:3px solid var(--accent);padding:1.1rem 1.3rem;margin-bottom:0.9rem;}
-.explain-block h4{font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:#4d9fff;}
+.explain-block h4{font-size:0.88rem;font-weight:600;margin-bottom:0.4rem;color:#5b86ff;}
 .explain-block p{font-size:0.83rem;color:var(--text2);line-height:1.7;}
 .explain-block.warn{border-color:var(--accent4);}
 .explain-block.warn h4{color:var(--accent4);}
@@ -193,12 +194,47 @@ table.dt tr:hover td{background:rgba(26,86,219,0.04);}
 .week-day-name{color:var(--text2);font-size:0.62rem;text-transform:uppercase;}
 .week-day-icon{font-size:1.2rem;margin:0.15rem 0;}
 .week-day-label{color:var(--text);font-size:0.65rem;}
+/* ===== TESTS DE RAZONAMIENTO ===== */
+.rz-intro{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-bottom:1.25rem;}
+.rz-intro h3{font-family:'Syne',sans-serif;font-size:1.05rem;margin-bottom:0.5rem;color:var(--text);}
+.rz-intro p{font-size:0.85rem;color:var(--text2);line-height:1.6;margin-bottom:0.5rem;}
+.rz-meta{display:flex;gap:1.5rem;flex-wrap:wrap;margin:1rem 0;}
+.rz-meta div span{font-family:'DM Mono',monospace;font-size:1.4rem;color:#5b86ff;display:block;}
+.rz-meta div small{font-size:0.7rem;color:var(--text2);}
+.rz-timerbar{position:sticky;top:64px;z-index:40;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:0.7rem 1.1rem;display:flex;align-items:center;justify-content:space-between;margin-bottom:1.1rem;}
+.rz-timer{font-family:'DM Mono',monospace;font-size:1.3rem;font-weight:500;color:var(--accent3);}
+.rz-timer.warn{color:var(--accent4);}
+.rz-timer.danger{color:var(--accent2);}
+.rz-progress{font-size:0.78rem;color:var(--text2);}
+.rz-q{background:var(--surface2);border:1px solid var(--border);border-radius:14px;padding:1.5rem;margin-bottom:1.1rem;}
+.rz-q-num{font-size:0.7rem;text-transform:uppercase;letter-spacing:1px;color:var(--text2);margin-bottom:0.5rem;}
+.rz-q-text{font-size:1rem;font-weight:500;line-height:1.5;margin-bottom:1rem;}
+.rz-opts{display:flex;flex-direction:column;gap:0.6rem;}
+.rz-opt{background:var(--surface3);border:2px solid var(--border);border-radius:9px;padding:0.75rem 1.05rem;cursor:pointer;transition:all .15s;font-size:0.9rem;color:var(--text);text-align:left;font-family:inherit;display:flex;align-items:center;gap:0.7rem;}
+.rz-opt:hover{border-color:var(--accent);background:rgba(77,124,254,.08);}
+.rz-opt.sel{border-color:var(--accent);background:rgba(77,124,254,.14);}
+.rz-opt-key{min-width:22px;height:22px;border-radius:6px;background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;color:var(--text2);}
+.rz-grid-opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:0.7rem;}
+.rz-opt-svg{background:var(--surface3);border:2px solid var(--border);border-radius:10px;padding:0.5rem;cursor:pointer;transition:all .15s;display:flex;flex-direction:column;align-items:center;gap:0.3rem;}
+.rz-opt-svg:hover{border-color:var(--accent);}
+.rz-opt-svg.sel{border-color:var(--accent);background:rgba(77,124,254,.12);}
+.rz-opt-svg .k{font-size:0.66rem;color:var(--text2);font-weight:700;}
+.rz-nav{display:flex;justify-content:space-between;gap:0.7rem;margin-top:1.1rem;}
+.domino{display:inline-block;background:#faf8f3;border:2px solid #1a3560;border-radius:7px;padding:3px;}
+.domino svg{display:block;}
+.rz-matrix{display:inline-grid;gap:6px;background:var(--surface3);padding:10px;border-radius:12px;border:1px solid var(--border);}
+.rz-cell{background:#faf8f3;border:1px solid #b8b8c8;border-radius:6px;display:flex;align-items:center;justify-content:center;}
+.rz-cell.blank{background:rgba(224,179,74,.12);border:2px dashed var(--gold);}
+.rz-dom-set{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:1rem 0;justify-content:center;}
+.rz-score{text-align:center;padding:2.5rem;background:var(--surface2);border-radius:14px;border:1px solid var(--border);}
+.rz-score .big{font-family:'DM Mono',monospace;font-size:3rem;color:#5b86ff;}
+.rz-score .lvl{font-family:'Syne',sans-serif;font-size:1.3rem;margin:0.5rem 0;}
 </style>
 </head>
 <body>
 <header>
   <div>
-    <div class="logo">ProHR El Salvador <span>🇸🇻 Plan de Estudio Completo RR.HH. & Admin</span></div>
+    <div class="logo">Watson <span>🇸🇻 Certificación de Conocimiento · RR.HH. & Admin SV</span></div>
   </div>
   <div class="header-right">
     <span>XP</span>
@@ -241,12 +277,25 @@ table.dt tr:hover td{background:rgba(26,86,219,0.04);}
     <button class="nav-item" onclick="nav('glosario')"></span>Glosario</button>
     <button class="nav-item" onclick="nav('ingles')"><span class="nav-icon">🇬🇧</span>Inglés Laboral</button>
     <button class="nav-item" onclick="nav('entrevista')"></span>Simul. Entrevista<span class="nav-badge new">IA</span></button>
+    <button class="nav-item" onclick="nav('wonderlic')"></span>Test Wonderlic<span class="nav-badge new">Nuevo</span></button>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Tests de Razonamiento</div>
+    <button class="nav-item" onclick="nav('wonderlic')"></span>Wonderlic<span class="nav-badge new">Nuevo</span></button>
+    <button class="nav-item" onclick="nav('raven')"></span>Raven (Matrices)<span class="nav-badge new">Nuevo</span></button>
+    <button class="nav-item" onclick="nav('domino')"></span>Dominó D-48<span class="nav-badge new">Nuevo</span></button>
   </div>
   <div class="sidebar-section">
     <div class="sidebar-label">Evaluaciones</div>
-    <button class="nav-item" onclick="nav('psico')"></span>Test Psicométrico</button>
+    <button class="nav-item" onclick="nav('psico')"></span>Dimensión Humana<span class="nav-badge new">Holmes</span></button>
     <button class="nav-item" onclick="nav('examen')"></span>Examen General</button>
     <button class="nav-item" onclick="nav('tutor')"></span>Tutor IA</button>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Razonamiento</div>
+    <button class="nav-item" onclick="nav('wonderlic')"></span>Wonderlic<span class="nav-badge hot">Nuevo</span></button>
+    <button class="nav-item" onclick="nav('raven')"></span>Raven (Matrices)<span class="nav-badge hot">Nuevo</span></button>
+    <button class="nav-item" onclick="nav('domino')"></span>Dominó D-48<span class="nav-badge hot">Nuevo</span></button>
   </div>
 </aside>
 
@@ -255,8 +304,9 @@ table.dt tr:hover td{background:rgba(26,86,219,0.04);}
 <!-- DASHBOARD -->
 <div class="page active" id="page-dashboard">
   <div class="hero">
-    <div class="hero-title">Tu ruta hacia el empleo ideal<br>en <span>El Salvador</span></div>
-    <div class="hero-sub">Plan completo adaptado al Código de Trabajo salvadoreño, ISSS, AFP, Facturación DTE del Ministerio de Hacienda y las habilidades que piden Computrabajo y LinkedIn SV en 2026.</div>
+    <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(224,179,74,0.1);border:1px solid rgba(224,179,74,0.3);color:#e0b34a;font-size:0.7rem;font-weight:600;letter-spacing:0.5px;text-transform:uppercase;padding:4px 12px;border-radius:20px;margin-bottom:1rem">🔭 Ecosistema Holmes · Watson</div>
+    <div class="hero-title">Certificá lo que sabés<br>para el mercado laboral de <span>El Salvador</span></div>
+    <div class="hero-sub">Watson es la rama de <strong>capacitación y certificación de conocimiento</strong> del ecosistema Holmes. Domina el Código de Trabajo salvadoreño, ISSS, AFP, Facturación DTE y las herramientas que piden Computrabajo y LinkedIn SV en 2026.</div>
     <div class="hero-stats">
       <div class="hstat"><span>8</span><small>Módulos</small></div>
       <div class="hstat"><span>100+</span><small>Preguntas</small></div>
@@ -345,9 +395,9 @@ table.dt tr:hover td{background:rgba(26,86,219,0.04);}
   <div class="section-title">Evaluaciones</div>
   <div class="grid-2">
     <div class="card" style="cursor:pointer" onclick="nav('psico')">
-      <div class="card-title">🧠 Test Psicométrico Profesional</div>
-      <div class="card-body">Evalúa inteligencia emocional, orientación a resultados, trabajo en equipo y adaptabilidad. Perfil detallado al finalizar.</div>
-      <br><button class="btn btn-primary" style="font-size:0.8rem;padding:7px 14px">Iniciar test →</button>
+      <div class="card-title">🧠 Evaluación de la Dimensión Humana</div>
+      <div class="card-body">Razonamiento (Dominó, Raven, Wonderlic) y comprensión de personalidad. Forma parte de <strong>Holmes</strong>, la inteligencia conversacional del ecosistema.</div>
+      <br><button class="btn btn-primary" style="font-size:0.8rem;padding:7px 14px">Ver Holmes →</button>
     </div>
     <div class="card" style="cursor:pointer" onclick="nav('examen')">
       <div class="card-title">✏️ Examen General Integrador</div>
@@ -601,7 +651,7 @@ table.dt tr:hover td{background:rgba(26,86,219,0.04);}
   <div class="factura-form">
     <div class="grid-2">
       <div>
-        <p style="font-size:0.87rem;font-weight:700;margin-bottom:0.75rem;color:#4d9fff">📤 Datos del Emisor</p>
+        <p style="font-size:0.87rem;font-weight:700;margin-bottom:0.75rem;color:#5b86ff">📤 Datos del Emisor</p>
         <div style="display:flex;flex-direction:column;gap:0.7rem">
           <div class="form-field"><label class="form-label">NIT Emisor</label><input class="form-input" id="dte-nit-e" placeholder="0614-XXXXXX-XXX-X"></div>
           <div class="form-field"><label class="form-label">Razón Social</label><input class="form-input" id="dte-nombre-e" placeholder="Mi Empresa S.A. de C.V."></div>
@@ -702,7 +752,7 @@ table.dt tr:hover td{background:rgba(26,86,219,0.04);}
   <div class="info-box">Calcula la planilla mensual de un empleado en El Salvador con los descuentos reales: ISSS, AFP e ISR según tabla oficial del Ministerio de Hacienda 2026. Incluye horas extra, vacaciones proporcionales y quincena 25.</div>
   <div class="grid-2" style="margin-bottom:1.25rem">
     <div class="factura-form">
-      <p style="font-size:0.88rem;font-weight:700;margin-bottom:0.9rem;color:#4d9fff">👤 Datos del Empleado</p>
+      <p style="font-size:0.88rem;font-weight:700;margin-bottom:0.9rem;color:#5b86ff">👤 Datos del Empleado</p>
       <div style="display:flex;flex-direction:column;gap:0.7rem">
         <div class="form-field"><label class="form-label">Nombre</label><input class="form-input" id="n-nombre" placeholder="Ej. María García López"></div>
         <div class="form-field"><label class="form-label">Salario mensual ($USD)</label><input class="form-input" id="n-salario" type="number" placeholder="600" step="50"></div>
@@ -795,12 +845,26 @@ table.dt tr:hover td{background:rgba(26,86,219,0.04);}
   </div>
 </div>
 
-<!-- PSICOMÉTRICO -->
+<!-- PSICOMÉTRICO (PREVIEW · pertenece a Holmes) -->
 <div class="page" id="page-psico">
-  <div class="lesson-header"><button class="lesson-back" onclick="nav('dashboard')">← Volver</button><div><div class="lesson-title">🧠 Test Psicométrico Profesional</div></div></div>
-  <div class="info-box">Evalúa las competencias más valoradas en empresas salvadoreñas: inteligencia emocional, orientación a resultados, trabajo en equipo y adaptabilidad. Respondé con honestidad.</div>
-  <div id="psico-area"><div id="psico-qs"></div><div id="psico-btn" style="display:none;margin-top:1.25rem"><button class="btn btn-primary" onclick="calcPsico()">Ver mi perfil →</button></div></div>
-  <div id="psico-res" style="display:none"></div>
+  <div class="lesson-header"><button class="lesson-back" onclick="nav('dashboard')">← Volver</button><div><div class="lesson-title">🧠 Evaluación de la Dimensión Humana</div><div style="margin-top:5px"><span class="tag gold">Vista previa</span> <span class="tag">Parte del ecosistema Holmes</span></div></div></div>
+  <div class="info-box">Watson certifica <strong>lo que sabés</strong> (conocimiento técnico, legislación, herramientas). La comprensión de la <strong>dimensión humana</strong> — razonamiento, personalidad, comportamiento — corresponde a <strong>Holmes</strong>, la inteligencia conversacional y multimodal del ecosistema.</div>
+
+  <div class="grid-2" style="margin-bottom:1.25rem">
+    <div class="explain-block ok"><h4>🧩 Lo que evalúa Watson</h4><p>Pruebas de razonamiento estructuradas que se aplican tecleando: <strong>Dominó (D-48)</strong>, <strong>Raven</strong> (matrices progresivas) y <strong>Wonderlic</strong> (razonamiento general). Próximamente como módulos interactivos dentro de Watson.</p></div>
+    <div class="explain-block"><h4>💬 Lo que evalúa Holmes</h4><p>A través de conversación y dinámicas, Holmes <em>observa tendencias</em> en variables conductuales — iniciativa, tolerancia a la presión, claridad estructural, adaptación — sin reducir a la persona a una etiqueta.</p></div>
+  </div>
+
+  <div class="card" style="border-color:rgba(255,215,0,0.3)">
+    <div class="card-title">🔭 Holmes — Inteligencia organizacional asistida</div>
+    <div class="card-body" style="margin-bottom:1rem">Holmes no reemplaza el juicio humano: lo amplifica. Integra múltiples fuentes de señales (conversación, ejercicios, observación) y las presenta con niveles de confianza y lenguaje prudente. Toda inferencia es contextual, nunca un diagnóstico absoluto.</div>
+    <div style="display:flex;gap:0.6rem;flex-wrap:wrap">
+      <button class="btn btn-primary" disabled style="opacity:0.6;cursor:not-allowed">Abrir Holmes →</button>
+      <span class="tag gold" style="align-self:center">En desarrollo</span>
+    </div>
+  </div>
+
+  <div class="info-box" style="margin-top:1.25rem">⚠️ <strong>Nota metodológica:</strong> ninguna fuente por sí sola comprende completamente a una persona. La conversación es una fuente parcial de señales contextualizadas, no una verdad absoluta.</div>
 </div>
 
 <!-- EXAMEN -->
@@ -823,7 +887,7 @@ table.dt tr:hover td{background:rgba(26,86,219,0.04);}
     <button class="btn btn-secondary" onclick="quickQ('¿Qué es una tabla dinámica en Excel y cómo se usa en planilla?')" style="font-size:0.78rem;padding:6px 11px">📊 Excel planilla</button>
   </div>
   <div class="ai-chat-box">
-    <div class="ai-chat-header">🤖 Tutor ProHR SV — Especialista en legislación y RR.HH. de El Salvador</div>
+    <div class="ai-chat-header">🤖 Tutor Watson — Especialista en legislación y RR.HH. de El Salvador</div>
     <div class="ai-messages" id="tutor-messages"><div class="ai-msg assistant">¡Hola! Soy tu tutor especializado en el contexto salvadoreño: Código de Trabajo de El Salvador, ISSS, AFP, Facturación DTE del MH, y Microsoft Office para planillas. Preguntame lo que necesités. ¿Por dónde empezamos?</div></div>
     <div class="ai-input-row">
       <input class="ai-input" id="tutor-input" placeholder="Escribí tu pregunta..." onkeydown="if(event.key==='Enter')sendTutor()">
@@ -849,7 +913,7 @@ table.dt tr:hover td{background:rgba(26,86,219,0.04);}
   <div class="info-box">Calculá la liquidación completa de un empleado: indemnización por despido injustificado (Art. 58 CT SV) + finiquito (vacaciones, prima vacacional, aguinaldo proporcional). Todo en dólares USD.</div>
   <div class="grid-2" style="margin-bottom:1.25rem">
     <div class="factura-form">
-      <p style="font-size:0.88rem;font-weight:700;margin-bottom:0.9rem;color:#4d9fff">👤 Datos para la Liquidación</p>
+      <p style="font-size:0.88rem;font-weight:700;margin-bottom:0.9rem;color:#5b86ff">👤 Datos para la Liquidación</p>
       <div style="display:flex;flex-direction:column;gap:0.7rem">
         <div class="form-field"><label class="form-label">Nombre del empleado</label><input class="form-input" id="liq-nombre" placeholder="Ej. María García"></div>
         <div class="form-field"><label class="form-label">Salario mensual ($USD)</label><input class="form-input" id="liq-salario" type="number" placeholder="600" step="50"></div>
@@ -980,12 +1044,90 @@ table.dt tr:hover td{background:rgba(26,86,219,0.04);}
   <div id="kpi-container"></div>
 </div>
 
+<!-- WONDERLIC -->
+<div class="page" id="page-wonderlic">
+  <div class="lesson-header"><button class="lesson-back" onclick="nav('dashboard')">← Volver</button><div><div class="lesson-title">⏱️ Test de Razonamiento Rápido</div><div style="margin-top:5px"><span class="tag gold">Estilo Wonderlic</span> <span class="tag">50 ítems · 12 min</span></div></div></div>
+  <div id="wl-start">
+    <div class="rz-intro">
+      <h3>¿Qué mide?</h3>
+      <p>Tu capacidad para resolver problemas variados bajo presión de tiempo: vocabulario, aritmética, series numéricas, lógica verbal y razonamiento abstracto. Es el formato que aplican muchas empresas como filtro inicial.</p>
+      <p><strong>Reglas:</strong> 50 preguntas, 12 minutos exactos, sin calculadora. Las preguntas aumentan de dificultad. Responde tantas como puedas; no te atasques en una sola.</p>
+      <div class="rz-meta"><div><span>50</span><small>Preguntas</small></div><div><span>12:00</span><small>Tiempo límite</small></div><div><span>~14s</span><small>Por pregunta</small></div></div>
+      <p style="font-size:0.78rem;color:var(--text2)">Ejercicios de práctica originales al estilo de la prueba. No reproducen los reactivos oficiales protegidos por derechos de autor.</p>
+      <button class="btn btn-primary" onclick="wlStart()">▶ Comenzar (12 min)</button>
+    </div>
+  </div>
+  <div id="wl-run" style="display:none">
+    <div class="rz-timerbar"><span class="rz-timer" id="wl-timer">12:00</span><span class="rz-progress" id="wl-prog">Pregunta 1 de 50</span></div>
+    <div id="wl-q"></div>
+    <div class="rz-nav">
+      <button class="btn btn-secondary" onclick="wlPrev()">← Anterior</button>
+      <button class="btn btn-primary" onclick="wlNext()">Siguiente →</button>
+      <button class="btn btn-success" onclick="wlFinish()">Terminar</button>
+    </div>
+  </div>
+  <div id="wl-res" style="display:none"></div>
+</div>
+
+<!-- RAVEN -->
+<div class="page" id="page-raven">
+  <div class="lesson-header"><button class="lesson-back" onclick="nav('dashboard')">← Volver</button><div><div class="lesson-title">🧩 Matrices Progresivas</div><div style="margin-top:5px"><span class="tag gold">Estilo Raven</span> <span class="tag">Razonamiento abstracto</span></div></div></div>
+  <div id="rv-start">
+    <div class="rz-intro">
+      <h3>¿Qué mide?</h3>
+      <p>Inteligencia general (factor "g") por medio de la comparación de formas y el razonamiento por analogías. Es no verbal y no cultural: observas una matriz a la que le falta una pieza y eliges, entre varias opciones, la que completa el patrón.</p>
+      <p><strong>Cómo funciona:</strong> cada matriz sigue una lógica (progresión, rotación, suma o resta de elementos). La dificultad aumenta serie por serie. Elige la figura que falta.</p>
+      <div class="rz-meta"><div><span id="rv-count">30</span><small>Matrices</small></div><div><span>6</span><small>Opciones c/u</small></div><div><span>~45</span><small>min sugerido</small></div></div>
+      <p style="font-size:0.78rem;color:var(--text2)">Matrices generadas con patrones originales al estilo de la prueba. No reproducen las láminas oficiales protegidas por derechos de autor.</p>
+      <button class="btn btn-primary" onclick="rvStart()">▶ Comenzar</button>
+    </div>
+  </div>
+  <div id="rv-run" style="display:none">
+    <div class="rz-timerbar"><span class="rz-timer" id="rv-timer">00:00</span><span class="rz-progress" id="rv-prog">Matriz 1 de 30</span></div>
+    <div id="rv-q"></div>
+    <div class="rz-nav">
+      <button class="btn btn-secondary" onclick="rvPrev()">← Anterior</button>
+      <button class="btn btn-primary" onclick="rvNext()">Siguiente →</button>
+      <button class="btn btn-success" onclick="rvFinish()">Terminar</button>
+    </div>
+  </div>
+  <div id="rv-res" style="display:none"></div>
+</div>
+
+<!-- DOMINO -->
+<div class="page" id="page-domino">
+  <div class="lesson-header"><button class="lesson-back" onclick="nav('dashboard')">← Volver</button><div><div class="lesson-title">🁫 Test de Dominós</div><div style="margin-top:5px"><span class="tag gold">Estilo D-48</span> <span class="tag">Razonamiento lógico</span></div></div></div>
+  <div id="dm-start">
+    <div class="rz-intro">
+      <h3>¿Qué mide?</h3>
+      <p>Capacidad de deducir relaciones lógicas. En cada problema hay un grupo de fichas de dominó. Dentro de cada mitad los puntos varían de 0 a 6. Debes observar el grupo y calcular cuántos puntos le corresponden a la ficha en blanco.</p>
+      <p><strong>Cómo funciona:</strong> las fichas siguen una secuencia (progresiones en cada mitad, a veces con vuelta de 6 a 0). Indica los puntos de la mitad superior e inferior de la ficha vacía.</p>
+      <div class="rz-meta"><div><span id="dm-count">28</span><small>Problemas</small></div><div><span>0-6</span><small>Puntos por mitad</small></div><div><span>~25</span><small>min sugerido</small></div></div>
+      <p style="font-size:0.78rem;color:var(--text2)">Ejercicios generados con patrones originales al estilo del D-48. No reproducen los reactivos oficiales protegidos por derechos de autor.</p>
+      <button class="btn btn-primary" onclick="dmStart()">▶ Comenzar</button>
+    </div>
+  </div>
+  <div id="dm-run" style="display:none">
+    <div class="rz-timerbar"><span class="rz-timer" id="dm-timer">00:00</span><span class="rz-progress" id="dm-prog">Problema 1 de 28</span></div>
+    <div id="dm-q"></div>
+    <div class="rz-nav">
+      <button class="btn btn-secondary" onclick="dmPrev()">← Anterior</button>
+      <button class="btn btn-primary" onclick="dmNext()">Siguiente →</button>
+      <button class="btn btn-success" onclick="dmFinish()">Terminar</button>
+    </div>
+  </div>
+  <div id="dm-res" style="display:none"></div>
+</div>
+
 </main>
 </div>
 <div class="notification" id="notif"><span id="notif-text">¡Logro!</span></div>
 
 <script>
 // ===== STATE =====
+// ⚙️ CONFIG: pegá aquí la URL de tu proxy de Cloudflare Workers (Paso 1).
+// Mientras esté vacía, el Tutor y el Simulacro mostrarán un aviso amable.
+const AI_PROXY='';
 let xp=0,level=1;
 let unlockedBadges=new Set();
 let quizState={};
@@ -1458,7 +1600,7 @@ function renderFlash(cat='all'){
     <div class="flash-card" id="fc2-${i}" onclick="revealFlash2(${i})">
       <div>
         <div style="font-size:0.65rem;text-transform:uppercase;letter-spacing:1px;color:var(--text2);margin-bottom:0.35rem">${{rrhh:'👥 RR.HH. SV',legal:'⚖️ Legal SV',fiscal:'📊 Fiscal/DTE',office:'💻 Office'}[f.cat]||f.cat}</div>
-        <div style="font-size:0.97rem;font-weight:700;color:#4d9fff">${f.term}</div>
+        <div style="font-size:0.97rem;font-weight:700;color:#5b86ff">${f.term}</div>
         <div id="fc2-def-${i}" style="display:none;font-size:0.78rem;color:var(--text2);line-height:1.5;margin-top:0.45rem">${f.def}</div>
       </div>
       <div style="font-size:0.7rem;color:var(--text2);margin-top:0.45rem" id="fc2-hint-${i}">👆 Tocá para ver definición</div>
@@ -1504,7 +1646,7 @@ function renderGlos(){
   displayGlos(sorted);
 }
 function displayGlos(data){
-  document.getElementById('glos-list').innerHTML=data.map(g=>`<div style="background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:0.9rem 1.1rem;margin-bottom:0.5rem"><div style="font-weight:700;color:#4d9fff;font-size:0.92rem;margin-bottom:0.25rem">${g.term}</div><div style="font-size:0.8rem;color:var(--text2);line-height:1.6">${g.def}</div></div>`).join('');
+  document.getElementById('glos-list').innerHTML=data.map(g=>`<div style="background:var(--surface2);border:1px solid var(--border);border-radius:9px;padding:0.9rem 1.1rem;margin-bottom:0.5rem"><div style="font-weight:700;color:#5b86ff;font-size:0.92rem;margin-bottom:0.25rem">${g.term}</div><div style="font-size:0.8rem;color:var(--text2);line-height:1.6">${g.def}</div></div>`).join('');
 }
 function filterGlos(){
   const q=document.getElementById('glos-input').value.toLowerCase();
@@ -1535,6 +1677,7 @@ const psicoQs=[
 const psicoScores={'ei1':[2,4,1,2],'ei2':[1,4,2,3],'or1':[2,1,4,3],'or2':[1,4,2,3],'te1':[2,4,3,4],'te2':[1,4,2,3],'ad1':[2,3,2,4],'ad2':[1,2,4,4],'lid1':[1,2,4,3],'conf1':[1,4,2,2]};
 function initPsico(){
   const area=document.getElementById('psico-area');
+  if(!area)return; // Preview: el test de personalidad ahora pertenece a Holmes
   if(document.getElementById('psico-res').style.display==='block')return;
   document.getElementById('psico-qs').innerHTML=psicoQs.map((q,i)=>`
     <div class="psych-card">
@@ -1588,9 +1731,10 @@ async function sendEnt(){
   appendEnt(msg,'user');inp.value='';
   entHistory.push({role:'user',content:msg});
   const thinking=appendEntEl('<span class="ai-thinking"><span class="dots"><span></span><span></span><span></span></span> Evaluando tu respuesta...</span>','assistant');
+  if(!AI_PROXY){thinking.innerHTML='🔌 El entrevistador con IA todavía no está conectado. Configurá el proxy (Paso 1) para activarlo.';return;}
   try{
     const msgs=entHistory.slice(1).map(m=>({role:m.role,content:m.content}));
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:`Eres entrevistador para ${entTipo} en empresa salvadoreña. Contexto: Código de Trabajo SV, ISSS 3%, AFP 7.25%, facturación DTE, Excel para planillas. Evaluá con ✅ | 💡 | ⭐/10. Hacé UNA nueva pregunta. Español latinoamericano. Máximo 250 palabras.`,messages:msgs})});
+    const res=await fetch(AI_PROXY,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:`Eres entrevistador para ${entTipo} en empresa salvadoreña. Contexto: Código de Trabajo SV, ISSS 3%, AFP 7.25%, facturación DTE, Excel para planillas. Evaluá con ✅ | 💡 | ⭐/10. Hacé UNA nueva pregunta. Español latinoamericano. Máximo 250 palabras.`,messages:msgs})});
     const data=await res.json();const text=data.content?.map(b=>b.text||'').join('')||'Error.';
     thinking.innerHTML=text.replace(/\n/g,'<br>');entHistory.push({role:'assistant',content:text});addXP(8);
   }catch(e){thinking.innerHTML='⚠️ Error de conexión.';}
@@ -1607,8 +1751,9 @@ async function sendTutor(){
   const inp=document.getElementById('tutor-input');const msg=inp.value.trim();if(!msg)return;
   appendTutor(msg,'user');inp.value='';
   const thinking=appendTutorEl('<span class="ai-thinking"><span class="dots"><span></span><span></span><span></span></span> Pensando...</span>','assistant');
+  if(!AI_PROXY){thinking.innerHTML='🔌 El Tutor IA todavía no está conectado. Configurá el proxy (Paso 1) para activarlo.';return;}
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:'Sos un tutor experto en el contexto laboral, fiscal y administrativo de El Salvador: Código de Trabajo SV, ISSS (3% obrero, 7.5% patronal), AFP (7.25% obrero, 8.75% patronal), ISR tabla SV 2026 (exento hasta $550), facturación DTE (FCF, CCF, portal factura.gob.sv), INSAFORP, Quincena 25, salario mínimo $408.80, y Microsoft Excel para planillas. Respondés en español latinoamericano claro y con ejemplos en dólares USD. Máximo 300 palabras.',messages:[{role:'user',content:msg}]})});
+    const res=await fetch(AI_PROXY,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-20250514',max_tokens:1000,system:'Sos un tutor experto en el contexto laboral, fiscal y administrativo de El Salvador: Código de Trabajo SV, ISSS (3% obrero, 7.5% patronal), AFP (7.25% obrero, 8.75% patronal), ISR tabla SV 2026 (exento hasta $550), facturación DTE (FCF, CCF, portal factura.gob.sv), INSAFORP, Quincena 25, salario mínimo $408.80, y Microsoft Excel para planillas. Respondés en español latinoamericano claro y con ejemplos en dólares USD. Máximo 300 palabras.',messages:[{role:'user',content:msg}]})});
     const data=await res.json();const text=data.content?.map(b=>b.text||'').join('')||'Error.';
     thinking.innerHTML=text.replace(/\n/g,'<br>');addXP(5);checkBadge('tutor');
   }catch(e){thinking.innerHTML='⚠️ Error de conexión.';}
@@ -2166,7 +2311,7 @@ function initKPIs(){
     <div class="info-box">Ingresá los datos reales de tu área de RR.HH. y el sistema calculará los KPIs más importantes con semáforo de estado (verde/amarillo/rojo).</div>
     <div class="grid-2">
       <div class="factura-form">
-        <p style="font-size:0.87rem;font-weight:700;color:#4d9fff;margin-bottom:0.75rem">📥 Datos del Período</p>
+        <p style="font-size:0.87rem;font-weight:700;color:#5b86ff;margin-bottom:0.75rem">📥 Datos del Período</p>
         <div style="display:flex;flex-direction:column;gap:0.65rem">
           <div class="form-field"><label class="form-label">Total empleados (headcount)</label><input class="form-input" id="k-total" type="number" placeholder="150"></div>
           <div class="form-field"><label class="form-label">Empleados que se fueron (bajas)</label><input class="form-input" id="k-bajas" type="number" placeholder="5"></div>
@@ -2236,11 +2381,259 @@ nav=function(id){
   if(id==='admin'&&!quizState['quiz-admin']) initQuiz('admin');
 };
 
+/* =====================================================================
+   TESTS DE RAZONAMIENTO (Watson) — Wonderlic · Raven · Dominó
+   Ejercicios de práctica originales al estilo de cada prueba.
+   No reproducen reactivos oficiales protegidos por derechos de autor.
+   ===================================================================== */
+
+// ---------- WONDERLIC (estilo) ----------
+const WLQ=[
+ {q:'¿Cuál es el último mes del año?',o:['Enero','Marzo','Julio','Diciembre','Octubre'],a:3},
+ {q:'ASCENDER es lo opuesto de:',o:['Subir','Elevar','Descender','Avanzar'],a:2},
+ {q:'Una caja de lápices cuesta $0.45. ¿Cuánto cuestan 3 cajas?',o:['$1.20','$1.35','$1.45','$1.50'],a:1},
+ {q:'¿Qué número sigue? 2 · 4 · 6 · 8 · ?',o:['9','10','11','12'],a:1},
+ {q:'Médico es a hospital como maestro es a:',o:['Aula','Escuela','Libro','Examen'],a:1},
+ {q:'ESCASO es lo opuesto de:',o:['Raro','Abundante','Pequeño','Único'],a:1},
+ {q:'¿Cuántos meses del año tienen al menos 28 días?',o:['1','2','6','12'],a:3},
+ {q:'¿Qué número sigue? 1 · 3 · 5 · 7 · ?',o:['8','9','10','11'],a:1},
+ {q:'CASA / CAZA. Estas palabras tienen significado:',o:['Igual','Opuesto','Ni igual ni opuesto'],a:2},
+ {q:'Si 5 lápices cuestan $1.00, ¿cuánto cuestan 8 lápices?',o:['$1.40','$1.60','$1.80','$2.00'],a:1},
+ {q:'TEMPRANO es lo opuesto de:',o:['Pronto','Tarde','Rápido','Antes'],a:1},
+ {q:'¿Qué número sigue? 3 · 6 · 9 · 12 · ?',o:['13','14','15','18'],a:2},
+ {q:'Pie es a zapato como mano es a:',o:['Dedo','Guante','Brazo','Anillo'],a:1},
+ {q:'Un tren recorre 60 km en 1 hora. ¿Cuántos km recorre en 3 horas?',o:['120','150','180','200'],a:2},
+ {q:'¿Cuál NO pertenece al grupo?',o:['Perro','Gato','Caballo','Mesa'],a:3},
+ {q:'¿Qué número sigue? 20 · 18 · 16 · 14 · ?',o:['10','11','12','13'],a:2},
+ {q:'LLENO es lo opuesto de:',o:['Completo','Vacío','Grande','Pesado'],a:1},
+ {q:'Un artículo cuesta $80 con 25% de descuento. ¿Precio final?',o:['$55','$60','$65','$70'],a:1},
+ {q:'Día es a noche como blanco es a:',o:['Gris','Claro','Negro','Luz'],a:2},
+ {q:'¿Qué número sigue? 1 · 2 · 4 · 8 · ?',o:['10','12','14','16'],a:3},
+ {q:'¿La frase "El perro ladra" es una oración con sentido?',o:['Sí','No'],a:0},
+ {q:'VALIENTE es lo opuesto de:',o:['Fuerte','Cobarde','Audaz','Héroe'],a:1},
+ {q:'3 obreros hacen un muro en 6 días. ¿Cuántos días tardan 6 obreros al mismo ritmo?',o:['2','3','4','6'],a:1},
+ {q:'¿Qué número sigue? 5 · 10 · 20 · 40 · ?',o:['60','70','80','100'],a:2},
+ {q:'Hambre es a comida como sed es a:',o:['Agua','Comer','Plato','Calor'],a:0},
+ {q:'¿Cuál cantidad es mayor?',o:['0.5','0.05','0.55','0.15'],a:2},
+ {q:'PERMITIR es lo opuesto de:',o:['Dejar','Autorizar','Prohibir','Aceptar'],a:2},
+ {q:'Si hoy es miércoles, ¿qué día será dentro de 4 días?',o:['Sábado','Domingo','Lunes','Martes'],a:1},
+ {q:'¿Qué número sigue? 100 · 90 · 80 · 70 · ?',o:['50','55','60','65'],a:2},
+ {q:'Se reparten $90 en proporción 2:1. ¿Cuánto recibe la parte menor?',o:['$20','$30','$45','$60'],a:1},
+ {q:'Autor es a libro como pintor es a:',o:['Pincel','Cuadro','Museo','Color'],a:1},
+ {q:'UNIR es lo opuesto de:',o:['Juntar','Separar','Pegar','Atar'],a:1},
+ {q:'Un reloj se atrasa 2 minutos por día. ¿Cuánto se atrasa en una semana?',o:['10 min','12 min','14 min','16 min'],a:2},
+ {q:'¿Qué número sigue? 1 · 4 · 9 · 16 · ?',o:['20','24','25','30'],a:2},
+ {q:'¿Cuál NO pertenece al grupo?',o:['Rosa','Clavel','Roble','Margarita'],a:2},
+ {q:'Compro a $40 y vendo a $50. ¿Qué porcentaje gano?',o:['10%','20%','25%','30%'],a:2},
+ {q:'Termómetro es a temperatura como reloj es a:',o:['Hora','Sol','Minuto','Número'],a:0},
+ {q:'¿Qué número sigue? 2 · 3 · 5 · 8 · 12 · ?',o:['15','16','17','18'],a:2},
+ {q:'MÁXIMO es lo opuesto de:',o:['Tope','Mínimo','Grande','Total'],a:1},
+ {q:'Un tanque de 200 L se llena a 25 L por minuto. ¿Cuántos minutos tarda?',o:['6','7','8','10'],a:2},
+ {q:'Abeja es a colmena como persona es a:',o:['Casa','Calle','Auto','Parque'],a:0},
+ {q:'¿Cuánto es el 15% de 200?',o:['25','30','35','40'],a:1},
+ {q:'¿Qué número sigue? 81 · 27 · 9 · 3 · ?',o:['0','1','2','3'],a:1},
+ {q:'"Todos los pájaros vuelan." ¿Es verdadero?',o:['Verdadero','Falso'],a:1},
+ {q:'Si A es mayor que B, y B es mayor que C, entonces A respecto a C es:',o:['Mayor','Menor','Igual'],a:0},
+ {q:'Un precio sube 10% y luego baja 10%. El precio final queda:',o:['Igual','Más caro','Más barato'],a:2},
+ {q:'¿Qué número sigue? 7 · 14 · 28 · 56 · ?',o:['98','100','112','120'],a:2},
+ {q:'TRANSPARENTE es lo opuesto de:',o:['Claro','Opaco','Limpio','Visible'],a:1},
+ {q:'Cierta comida alcanza para 12 personas durante 4 días. ¿Cuántos días dura para 6 personas?',o:['6','8','10','12'],a:1},
+ {q:'¿Cuál es el promedio de 10, 20, 30 y 40?',o:['20','25','30','35'],a:1}
+];
+let WL={cur:0,ans:[],t:720,iv:null,done:false};
+function wlStart(){
+  WL={cur:0,ans:new Array(WLQ.length).fill(null),t:720,iv:null,done:false};
+  document.getElementById('wl-start').style.display='none';
+  document.getElementById('wl-res').style.display='none';
+  document.getElementById('wl-run').style.display='block';
+  wlRender();wlTick();
+  WL.iv=setInterval(wlTick,1000);
+}
+function wlTick(){
+  const el=document.getElementById('wl-timer');
+  const m=Math.floor(WL.t/60),s=WL.t%60;
+  el.textContent=m+':'+String(s).padStart(2,'0');
+  el.className='rz-timer'+(WL.t<=30?' danger':WL.t<=120?' warn':'');
+  if(WL.t<=0){clearInterval(WL.iv);wlFinish();return;}
+  WL.t--;
+}
+function wlRender(){
+  const q=WLQ[WL.cur];
+  document.getElementById('wl-prog').textContent='Pregunta '+(WL.cur+1)+' de '+WLQ.length;
+  document.getElementById('wl-q').innerHTML='<div class="rz-q"><div class="rz-q-num">Pregunta '+(WL.cur+1)+'</div><div class="rz-q-text">'+q.q+'</div><div class="rz-opts">'+
+    q.o.map((o,i)=>'<button class="rz-opt'+(WL.ans[WL.cur]===i?' sel':'')+'" onclick="wlPick('+i+')"><span class="rz-opt-key">'+String.fromCharCode(65+i)+'</span>'+o+'</button>').join('')+'</div></div>';
+}
+function wlPick(i){WL.ans[WL.cur]=i;wlRender();}
+function wlPrev(){if(WL.cur>0){WL.cur--;wlRender();}}
+function wlNext(){if(WL.cur<WLQ.length-1){WL.cur++;wlRender();}}
+function wlFinish(){
+  if(WL.done)return;WL.done=true;
+  clearInterval(WL.iv);
+  let correct=0,answered=0;
+  WLQ.forEach((q,i)=>{if(WL.ans[i]!==null){answered++;if(WL.ans[i]===q.a)correct++;}});
+  const pct=Math.round(correct/WLQ.length*100);
+  let nivel,interp;
+  if(correct>=35){nivel='Alto';interp='Rendimiento superior. Apto para puestos analíticos y de coordinación que exigen rapidez de razonamiento.';}
+  else if(correct>=25){nivel='Medio-alto';interp='Buen rendimiento. Cubre el rango que piden la mayoría de puestos administrativos y de RR.HH. en El Salvador.';}
+  else if(correct>=15){nivel='Medio';interp='Rendimiento promedio. Conviene practicar series numéricas y aritmética mental para ganar velocidad.';}
+  else{nivel='En desarrollo';interp='Practica con calma cada tipo de ítem. La velocidad llega con la repetición; vuelve a intentarlo.';}
+  document.getElementById('wl-run').style.display='none';
+  const r=document.getElementById('wl-res');r.style.display='block';
+  r.innerHTML='<div class="rz-score"><div class="rz-q-num">Resultado · Estilo Wonderlic</div><div class="big">'+correct+'<span style="font-size:1.2rem;color:var(--text2)">/'+WLQ.length+'</span></div><p style="color:var(--text2);font-size:0.85rem;margin:0.3rem 0 1rem">Respondidas: '+answered+' · Aciertos: '+correct+' ('+pct+'%) · Nivel: <strong style="color:#5b86ff">'+nivel+'</strong></p><p style="font-size:0.88rem;line-height:1.6;max-width:520px;margin:0 auto 1.2rem">'+interp+'</p><button class="btn btn-primary" onclick="wlStart()">Repetir test</button> <button class="btn btn-secondary" onclick="wlReview()">Ver respuestas</button></div><div id="wl-review"></div>';
+  addXP(40);showNotif('⏱️ Test de razonamiento completado · +40 XP');
+}
+function wlReview(){
+  const c=document.getElementById('wl-review');
+  c.innerHTML='<div class="section-title" style="margin-top:1.5rem">Revisión</div>'+WLQ.map((q,i)=>{
+    const u=WL.ans[i],ok=u===q.a;
+    return '<div class="rz-q" style="padding:1rem"><div class="rz-q-num">'+(i+1)+(u===null?' · sin responder':ok?' · correcta ✓':' · incorrecta ✗')+'</div><div style="font-size:0.88rem;margin-bottom:0.4rem">'+q.q+'</div><div style="font-size:0.82rem;color:var(--accent3)">Correcta: '+q.o[q.a]+'</div>'+(u!==null&&!ok?'<div style="font-size:0.82rem;color:var(--accent2)">Tu respuesta: '+q.o[u]+'</div>':'')+'</div>';
+  }).join('');
+  c.scrollIntoView({behavior:'smooth'});
+}
+
+// ---------- DOMINÓ (estilo D-48) ----------
+const PIP={0:[],1:[[15,15]],2:[[8,8],[22,22]],3:[[8,8],[15,15],[22,22]],4:[[8,8],[22,8],[8,22],[22,22]],5:[[8,8],[22,8],[15,15],[8,22],[22,22]],6:[[8,8],[22,8],[8,15],[22,15],[8,22],[22,22]]};
+function domHalf(v,oy){if(v==='?')return '<text x="15" y="'+(oy+20)+'" text-anchor="middle" font-size="18" fill="#1a3560" font-family="DM Mono">?</text>';return (PIP[v]||[]).map(p=>'<circle cx="'+p[0]+'" cy="'+(oy+p[1])+'" r="2.6" fill="#1a3560"/>').join('');}
+function domTile(t,b){return '<span class="domino"><svg width="30" height="60" viewBox="0 0 30 60">'+domHalf(t,0)+'<line x1="2" y1="30" x2="28" y2="30" stroke="#1a3560" stroke-width="1.5"/>'+domHalf(b,30)+'</svg></span>';}
+function mod7(n){return ((n%7)+7)%7;}
+function buildDomino(){
+  const items=[];const rng=(s)=>{let x=s;return ()=>{x=(x*9301+49297)%233280;return x/233280;};};
+  let seed=7;const rand=rng(seed);
+  const ri=(a,b)=>Math.floor(rand()*(b-a+1))+a;
+  for(let i=0;i<28;i++){
+    const K=i<10?4:i<20?5:6;
+    const t0=ri(0,6),b0=ri(0,6);
+    let st,sb;
+    if(i<8){st=ri(0,2);sb=ri(0,2);}        // progresiones suaves
+    else if(i<16){st=ri(1,3);sb=ri(1,3);}   // medio
+    else{st=ri(1,4);sb=(ri(0,1)?1:-1)*ri(1,3);} // top sube, bottom sube o baja
+    const tops=[],bots=[];
+    for(let k=0;k<K;k++){tops.push(mod7(t0+st*k));bots.push(mod7(b0+sb*k));}
+    const ansT=tops[K-1],ansB=bots[K-1];
+    tops[K-1]='?';bots[K-1]='?';
+    items.push({tops,bots,ansT,ansB,K});
+  }
+  return items;
+}
+let DM={items:[],cur:0,ans:[],t:0,iv:null,done:false};
+function dmStart(){
+  DM={items:buildDomino(),cur:0,ans:[],t:0,iv:null,done:false};
+  DM.ans=DM.items.map(()=>({t:null,b:null}));
+  document.getElementById('dm-count').textContent=DM.items.length;
+  document.getElementById('dm-start').style.display='none';
+  document.getElementById('dm-res').style.display='none';
+  document.getElementById('dm-run').style.display='block';
+  DM.iv=setInterval(()=>{DM.t++;const m=Math.floor(DM.t/60),s=DM.t%60;document.getElementById('dm-timer').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');},1000);
+  dmRender();
+}
+function dmRender(){
+  const it=DM.items[DM.cur];
+  document.getElementById('dm-prog').textContent='Problema '+(DM.cur+1)+' de '+DM.items.length;
+  let tiles='';for(let k=0;k<it.K;k++)tiles+=domTile(it.tops[k],it.bots[k]);
+  const a=DM.ans[DM.cur];
+  const row=(sel,half)=>{let h='';for(let v=0;v<=6;v++)h+='<button class="rz-opt'+(sel===v?' sel':'')+'" style="padding:0.4rem 0;justify-content:center;min-width:38px" onclick="dmPick(\''+half+'\','+v+')">'+v+'</button>';return h;};
+  document.getElementById('dm-q').innerHTML='<div class="rz-q"><div class="rz-q-num">Problema '+(DM.cur+1)+'</div><div class="rz-q-text" style="font-size:0.9rem">¿Qué puntos corresponden a la ficha en blanco?</div><div class="rz-dom-set">'+tiles+'</div>'+
+    '<div style="font-size:0.78rem;color:var(--text2);margin:0.6rem 0 0.2rem">Mitad superior:</div><div style="display:flex;gap:0.4rem;flex-wrap:wrap">'+row(a.t,'t')+'</div>'+
+    '<div style="font-size:0.78rem;color:var(--text2);margin:0.6rem 0 0.2rem">Mitad inferior:</div><div style="display:flex;gap:0.4rem;flex-wrap:wrap">'+row(a.b,'b')+'</div></div>';
+}
+function dmPick(half,v){DM.ans[DM.cur][half]=v;dmRender();}
+function dmPrev(){if(DM.cur>0){DM.cur--;dmRender();}}
+function dmNext(){if(DM.cur<DM.items.length-1){DM.cur++;dmRender();}}
+function dmFinish(){
+  if(DM.done)return;DM.done=true;clearInterval(DM.iv);
+  let correct=0;DM.items.forEach((it,i)=>{if(DM.ans[i].t===it.ansT&&DM.ans[i].b===it.ansB)correct++;});
+  const pct=Math.round(correct/DM.items.length*100);
+  document.getElementById('dm-run').style.display='none';
+  const r=document.getElementById('dm-res');r.style.display='block';
+  r.innerHTML='<div class="rz-score"><div class="rz-q-num">Resultado · Estilo Dominó D-48</div><div class="big">'+correct+'<span style="font-size:1.2rem;color:var(--text2)">/'+DM.items.length+'</span></div><p style="color:var(--text2);font-size:0.85rem;margin:0.3rem 0 1rem">Aciertos: '+pct+'% · Tiempo: '+Math.floor(DM.t/60)+' min '+(DM.t%60)+' s</p><p style="font-size:0.88rem;line-height:1.6;max-width:520px;margin:0 auto 1.2rem">El dominó mide tu capacidad de detectar la lógica de una secuencia. Si fallaste varias, revisá si la progresión iba sumando, restando o "dando la vuelta" de 6 a 0.</p><button class="btn btn-primary" onclick="dmStart()">Generar nuevos</button></div>';
+  addXP(40);showNotif('🁫 Test de dominós completado · +40 XP');
+}
+
+// ---------- RAVEN (estilo matrices) ----------
+function rvDots(n){let s='';const pos={1:[[30,30]],2:[[18,18],[42,42]],3:[[16,16],[30,30],[44,44]],4:[[18,18],[42,18],[18,42],[42,42]],5:[[18,18],[42,18],[30,30],[18,42],[42,42]],6:[[18,16],[42,16],[18,30],[42,30],[18,44],[42,44]],7:[[18,16],[42,16],[18,30],[30,30],[42,30],[18,44],[42,44]],8:[[16,16],[30,16],[44,16],[16,30],[44,30],[16,44],[30,44],[44,44]],9:[[16,16],[30,16],[44,16],[16,30],[30,30],[44,30],[16,44],[30,44],[44,44]]};(pos[n]||[]).forEach(p=>s+='<circle cx="'+p[0]+'" cy="'+p[1]+'" r="3.6" fill="#1a3560"/>');return s;}
+function rvArrow(deg){return '<g transform="rotate('+deg+' 30 30)"><polygon points="30,10 44,40 30,32 16,40" fill="#1a3560"/></g>';}
+function rvBars(n){let s='';const x0=12,gap=(36)/(n+1);for(let i=1;i<=n;i++){const x=x0+gap*i;s+='<line x1="'+x+'" y1="12" x2="'+x+'" y2="48" stroke="#1a3560" stroke-width="3"/>';}return s;}
+function rvNested(n){let s='';const step=16/Math.max(n,1);for(let i=0;i<n;i++){const o=i*step;s+='<rect x="'+(10+o)+'" y="'+(10+o)+'" width="'+(40-o*2)+'" height="'+(40-o*2)+'" fill="none" stroke="#1a3560" stroke-width="2"/>';}return s;}
+function rvSvg(inner,sz){sz=sz||60;return '<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 60 60">'+inner+'</svg>';}
+function buildRaven(){
+  const items=[];
+  // T1: dots = (r+1)*(c+1), blank (2,2)=9
+  const t1=()=>{const cells=[];for(let r=0;r<3;r++)for(let c=0;c<3;c++){cells.push((r===2&&c===2)?null:rvDots((r+1)*(c+1)));}
+    const correct=rvDots(9);const distract=[rvDots(6),rvDots(8),rvDots(7),rvDots(4),rvDots(12>9?5:5)];return {cells,correct,distract,rule:'Cada celda multiplica fila × columna.'};};
+  // T2: dots add (r+1)+(c+1) blank=6
+  const t2=()=>{const cells=[];for(let r=0;r<3;r++)for(let c=0;c<3;c++){cells.push((r===2&&c===2)?null:rvDots((r+1)+(c+1)));}
+    const correct=rvDots(6);const distract=[rvDots(5),rvDots(4),rvDots(7),rvDots(3),rvDots(8)];return {cells,correct,distract,rule:'Cada celda suma fila + columna.'};};
+  // T3: rotation angle=r*90+c*45 blank=270
+  const t3=()=>{const cells=[];for(let r=0;r<3;r++)for(let c=0;c<3;c++){cells.push((r===2&&c===2)?null:rvArrow(r*90+c*45));}
+    const correct=rvArrow(270);const distract=[rvArrow(225),rvArrow(180),rvArrow(315),rvArrow(90),rvArrow(135)];return {cells,correct,distract,rule:'La flecha rota 45° por columna y 90° por fila.'};};
+  // T4: nested squares count=r+c+1 blank=5
+  const t4=()=>{const cells=[];for(let r=0;r<3;r++)for(let c=0;c<3;c++){cells.push((r===2&&c===2)?null:rvNested(r+c+1));}
+    const correct=rvNested(5);const distract=[rvNested(4),rvNested(3),rvNested(2),rvNested(1),rvNested(6)];return {cells,correct,distract,rule:'El número de cuadros = fila + columna.'};};
+  // T5: bars count=(r+1)+(c+1)-1 blank=5
+  const t5=()=>{const cells=[];for(let r=0;r<3;r++)for(let c=0;c<3;c++){const n=(r+1)+(c+1)-1;cells.push((r===2&&c===2)?null:rvBars(n));}
+    const correct=rvBars(5);const distract=[rvBars(4),rvBars(3),rvBars(6),rvBars(2),rvBars(1)];return {cells,correct,distract,rule:'El número de barras = fila + columna − 1.'};};
+  const tpls=[t1,t2,t3,t4,t5];
+  for(let i=0;i<30;i++){const it=tpls[i%5]();
+    const opts=[it.correct,...it.distract.slice(0,5)];
+    // shuffle deterministically
+    for(let k=opts.length-1;k>0;k--){const j=(i*7+k*3)%(k+1);const tmp=opts[k];opts[k]=opts[j];opts[j]=tmp;}
+    const ansIdx=opts.indexOf(it.correct);
+    items.push({cells:it.cells,opts,ansIdx,rule:it.rule});
+  }
+  return items;
+}
+let RV={items:[],cur:0,ans:[],t:0,iv:null,done:false};
+function rvStart(){
+  RV={items:buildRaven(),cur:0,ans:[],t:0,iv:null,done:false};
+  RV.ans=RV.items.map(()=>null);
+  document.getElementById('rv-count').textContent=RV.items.length;
+  document.getElementById('rv-start').style.display='none';
+  document.getElementById('rv-res').style.display='none';
+  document.getElementById('rv-run').style.display='block';
+  RV.iv=setInterval(()=>{RV.t++;const m=Math.floor(RV.t/60),s=RV.t%60;document.getElementById('rv-timer').textContent=String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');},1000);
+  rvRender();
+}
+function rvRender(){
+  const it=RV.items[RV.cur];
+  document.getElementById('rv-prog').textContent='Matriz '+(RV.cur+1)+' de '+RV.items.length;
+  const matrix='<div class="rz-matrix" style="grid-template-columns:repeat(3,64px)">'+it.cells.map(c=>'<div class="rz-cell'+(c===null?' blank':'')+'" style="width:64px;height:64px">'+(c===null?'<span style="color:var(--gold);font-size:1.6rem">?</span>':rvSvg(c))+'</div>').join('')+'</div>';
+  const opts='<div class="rz-grid-opts" style="margin-top:1rem">'+it.opts.map((o,i)=>'<div class="rz-opt-svg'+(RV.ans[RV.cur]===i?' sel':'')+'" onclick="rvPick('+i+')"><span class="k">'+(i+1)+'</span>'+rvSvg(o,54)+'</div>').join('')+'</div>';
+  document.getElementById('rv-q').innerHTML='<div class="rz-q"><div class="rz-q-num">Matriz '+(RV.cur+1)+'</div><div class="rz-q-text" style="font-size:0.9rem">¿Qué figura completa el patrón?</div><div style="display:flex;justify-content:center">'+matrix+'</div>'+opts+'</div>';
+}
+function rvPick(i){RV.ans[RV.cur]=i;rvRender();}
+function rvPrev(){if(RV.cur>0){RV.cur--;rvRender();}}
+function rvNext(){if(RV.cur<RV.items.length-1){RV.cur++;rvRender();}}
+function rvFinish(){
+  if(RV.done)return;RV.done=true;clearInterval(RV.iv);
+  let correct=0;RV.items.forEach((it,i)=>{if(RV.ans[i]===it.ansIdx)correct++;});
+  const pct=Math.round(correct/RV.items.length*100);
+  let diag;
+  if(pct>=90)diag='Rango I — Superior. Razonamiento abstracto sobresaliente.';
+  else if(pct>=75)diag='Rango II — Superior al término medio.';
+  else if(pct>=50)diag='Rango III — Término medio. Dentro de lo esperado.';
+  else if(pct>=25)diag='Rango IV — Inferior al término medio. Practica identificando la regla de cada serie.';
+  else diag='Rango V — En desarrollo. Observa primero qué cambia de izquierda a derecha y luego de arriba a abajo.';
+  document.getElementById('rv-run').style.display='none';
+  const r=document.getElementById('rv-res');r.style.display='block';
+  r.innerHTML='<div class="rz-score"><div class="rz-q-num">Resultado · Estilo Raven</div><div class="big">'+correct+'<span style="font-size:1.2rem;color:var(--text2)">/'+RV.items.length+'</span></div><p style="color:var(--text2);font-size:0.85rem;margin:0.3rem 0 1rem">Aciertos: '+pct+'% · Tiempo: '+Math.floor(RV.t/60)+' min '+(RV.t%60)+' s</p><p style="font-size:0.88rem;line-height:1.6;max-width:540px;margin:0 auto 1.2rem">'+diag+' <em style="color:var(--text2)">Nota: este es un percentil aproximado de práctica, no un diagnóstico clínico.</em></p><button class="btn btn-primary" onclick="rvStart()">Generar nuevas</button></div>';
+  addXP(40);showNotif('🧩 Matrices completadas · +40 XP');
+}
+
+// Reset de vistas al navegar a un test de razonamiento
+const _nav3=nav;
+nav=function(id){
+  _nav3(id);
+  if(id==='wonderlic'&&WL.iv){/* en curso, no reiniciar */}
+  if(id==='wonderlic'&&!WL.iv){document.getElementById('wl-start').style.display='block';document.getElementById('wl-run').style.display='none';document.getElementById('wl-res').style.display='none';}
+  if(id==='raven'&&!RV.iv){document.getElementById('rv-start').style.display='block';document.getElementById('rv-run').style.display='none';document.getElementById('rv-res').style.display='none';}
+  if(id==='domino'&&!DM.iv){document.getElementById('dm-start').style.display='block';document.getElementById('dm-run').style.display='none';document.getElementById('dm-res').style.display='none';}
+};
+
 // ===== INIT =====
 window.addEventListener('load',()=>{
   loadEx('nomina');
   renderGlos();
-  setTimeout(()=>showNotif('🇸🇻 ¡Bienvenido a ProHR El Salvador!'),1000);
+  setTimeout(()=>showNotif('🇸🇻 ¡Bienvenido a Watson!'),1000);
 });
 </script>
  <!-- Supabase login definitivo -->
