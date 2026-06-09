@@ -2653,7 +2653,7 @@ window.addEventListener('load',()=>{
   window.iniciarSesionSV = function() {
     _cliente.auth.signInWithOAuth({
       provider: 'google',
-      options: { redirectTo: window.location.href }
+      options: { redirectTo:'https://holmescoanalytics.github.io/Holmescoanalytics/' }
     }).catch(err => {
       console.error('Error login:', err);
       document.getElementById('miLogin').innerHTML = '<span style="color:#ff6584">Error al conectar</span>';
