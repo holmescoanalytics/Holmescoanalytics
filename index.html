@@ -2240,60 +2240,62 @@ window.addEventListener('load',()=>{
   setTimeout(()=>showNotif('🇸🇻 ¡Bienvenido a ProHR El Salvador!'),1000);
 });
 </script>
-<!-- Cargar Supabase PRIMERO -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
-  // ESPERAR a que la librería cargue completamente
-  document.addEventListener('DOMContentLoaded', function() {
+  // Esperar a que todo cargue
+  window.addEventListener('load', function() {
     
-    // Tu configuración
+    // Verificar que la librería existe
+    if (typeof supabaseJs === 'undefined') {
+      console.error('❌ Supabase no cargó correctamente');
+      return;
+    }
+    
+    // Configuración
     const SUPABASE_URL = 'https://zpseipfypcxktbbrbkiq.supabase.co';
     const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpwc2VpcGZ5cGN4a3RiYnJia2lxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NDk4MzIsImV4cCI6MjA5NjUyNTgzMn0.RDrY9_gnSqsZgnaWx0FF6gHHNG8ry--ETmAmCHAN024';
     
-    // Crear el cliente
+    // Crear cliente - NOTA: usamos supabaseJs (con J mayúscula)
     const supabase = supabaseJs.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
     
-    // Funciones de login
-    window.loginConGoogle = async function() {
-      await supabase.auth.signInWithOAuth({
+    // Funciones globales
+    window.iniciarSesion = function() {
+      supabase.auth.signInWithOAuth({
         provider: 'google',
         options: { redirectTo: window.location.href }
       });
     };
     
-    window.logout = async function() {
-      await supabase.auth.signOut();
+    window.cerrarSesion = function() {
+      supabase.auth.signOut();
       window.location.reload();
     };
     
     // Verificar usuario
-    async function checkUser() {
+    async function verificarUsuario() {
       const { data: { user } } = await supabase.auth.getUser();
-      const container = document.getElementById('login-container');
-      const userSpan = document.getElementById('usuario-nombre');
+      const contenedor = document.getElementById('login-container');
+      const nombreSpan = document.getElementById('usuario-nombre');
       
-      if (user) {
-        if (userSpan) userSpan.textContent = user.email;
-        if (container) {
-          container.innerHTML = `<button onclick="logout()" style="background:#dc2626;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer">Cerrar sesión</button>`;
+      if (contenedor) {
+        if (user) {
+          if (nombreSpan) nombreSpan.textContent = user.email;
+          contenedor.innerHTML = '<button onclick="cerrarSesion()" style="background:#dc2626;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer">🔒 Cerrar sesión</button>';
+          console.log('✅ Conectado:', user.email);
+        } else {
+          contenedor.innerHTML = '<button onclick="iniciarSesion()" style="background:#4285F4;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;font-size:14px">🚀 Iniciar sesión con Google</button>';
+          console.log('❌ No conectado');
         }
-        console.log('✅ Usuario conectado:', user.email);
-      } else {
-        if (container) {
-          container.innerHTML = `<button onclick="loginConGoogle()" style="background:#4285F4;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;font-size:14px">🚀 Iniciar sesión con Google</button>`;
-        }
-        console.log('❌ Usuario no conectado');
       }
     }
     
-    // Ejecutar
-    checkUser();
+    verificarUsuario();
     
   });
 </script>
 
-<!-- CONTENEDOR DEL LOGIN -->
+<!-- Contenedor del login -->
 <div style="position: fixed; top: 10px; right: 10px; background: white; padding: 10px 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 9999;">
   <div id="login-container"></div>
   <span id="usuario-nombre" style="font-size: 12px; color: #666;"></span>
