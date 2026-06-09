@@ -1,28 +1,28 @@
-// login.js
-const SB_URL = 'https://zpseipfypcxktbbrbkiq.supabase.co';
-const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpwc2VpcGZ5cGN4a3RiYnJia2lxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NDk4MzIsImV4cCI6MjA5NjUyNTgzMn0.RDrY9_gnSqsZgnaWx0FF6gHHNG8ry--ETmAmCHAN024';
+// login.js - SIN la palabra "supabase"
+const PROYECTO_URL = 'https://zpseipfypcxktbbrbkiq.supabase.co';
+const PROYECTO_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpwc2VpcGZ5cGN4a3RiYnJia2lxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NDk4MzIsImV4cCI6MjA5NjUyNTgzMn0.RDrY9_gnSqsZgnaWx0FF6gHHNG8ry--ETmAmCHAN024';
 
-const sbClient = supabase.createClient(SB_URL, SB_KEY);
+const cliente = supabase.createClient(PROYECTO_URL, PROYECTO_KEY);
 
 async function login() {
-  await sbClient.auth.signInWithOAuth({
+  await cliente.auth.signInWithOAuth({
     provider: 'google',
     options: { redirectTo: window.location.href }
   });
 }
 
 async function logout() {
-  await sbClient.auth.signOut();
+  await cliente.auth.signOut();
   location.reload();
 }
 
-async function checkUser() {
-  const { data: { user } } = await sbClient.auth.getUser();
-  const container = document.getElementById('auth-container');
+async function verificar() {
+  const { data: { user } } = await cliente.auth.getUser();
+  const contenedor = document.getElementById('auth-container');
   
-  if (container) {
+  if (contenedor) {
     if (user) {
-      container.innerHTML = `
+      contenedor.innerHTML = `
         <div class="user-info">
           <img src="${user.user_metadata?.avatar_url || ''}" class="user-avatar">
           <span>${user.email}</span>
@@ -30,7 +30,7 @@ async function checkUser() {
         </div>
       `;
     } else {
-      container.innerHTML = `
+      contenedor.innerHTML = `
         <button onclick="login()" class="login-btn">
           <span>🇸🇻</span> Iniciar sesión con Google
         </button>
@@ -39,4 +39,4 @@ async function checkUser() {
   }
 }
 
-checkUser();
+verificar();
