@@ -2223,56 +2223,24 @@ badgesData.push(
   {id:'tutor',icon:'💬',name:'Estudiante',desc:'Usá el Tutor IA',earned:false},
 );
 
+<script>
 // ===== UPDATE NAV LAZY INIT =====
-const _nav2=nav;
-nav=function(id){
+const _nav2 = nav;
+nav = function(id) {
   _nav2(id);
-  if(id==='eval') initEvalDesempeno();
-  if(id==='kpis') initKPIs();
-  if(id==='ingles'&&!quizState['quiz-ingles']) initQuiz('ingles');
-  if(id==='admin'&&!quizState['quiz-admin']) initQuiz('admin');
+  if (id === 'eval') initEvalDesempeno();
+  if (id === 'kpis') initKPIs();
+  if (id === 'ingles' && !quizState['quiz-ingles']) initQuiz('ingles');
+  if (id === 'admin' && !quizState['quiz-admin']) initQuiz('admin');
 };
 
-<script>
 // ===== INIT =====
-window.addEventListener('load',()=>{
+window.addEventListener('load', () => {
   loadEx('nomina');
   renderGlos();
-  setTimeout(()=>showNotif('🇸🇻 ¡Bienvenido a ProHR El Salvador!'),1000);
+  setTimeout(() => showNotif('🇸🇻 ¡Bienvenido a ProHR El Salvador!'), 1000);
 });
 </script>
-
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-
-<script>
-  const SUPABASE_URL = 'https://zpseipfypcxktbbrbkiq.supabase.co';
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpwc2VpcGZ5cGN4a3RiYnJia2lxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NDk4MzIsImV4cCI6MjA5NjUyNTgzMn0.RDrY9_gnSqsZgnaWx0FF6gHHNG8ry--ETmAmCHAN024';
-  
-  const supabase = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-  
-  window.loginConGoogle = async () => {
-    await supabase.auth.signInWithOAuth({ provider: 'google', options: { redirectTo: window.location.href } });
-  };
-  
-  window.cerrarSesion = async () => {
-    await supabase.auth.signOut();
-    window.location.reload();
-  };
-  
-  document.addEventListener('DOMContentLoaded', async () => {
-    const { data: { user } } = await supabase.auth.getUser();
-    const contenedor = document.getElementById('login-container');
-    if (contenedor) {
-      contenedor.innerHTML = user 
-        ? `<button onclick="cerrarSesion()" style="background:#dc2626;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer">Cerrar sesión: ${user.email}</button>`
-        : `<button onclick="loginConGoogle()" style="background:#4285F4;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;font-size:14px">🚀 Iniciar sesión con Google</button>`;
-    }
-  });
-</script>
-
-<div style="position: fixed; top: 10px; right: 10px; background: white; padding: 10px 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 9999;">
-  <div id="login-container"></div>
-</div>
 
 </body>
 </html>
