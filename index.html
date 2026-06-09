@@ -2240,46 +2240,57 @@ window.addEventListener('load',()=>{
   setTimeout(()=>showNotif('🇸🇻 ¡Bienvenido a ProHR El Salvador!'),1000);
 });
 </script>
-<!-- 1. Cargar la librería de Supabase -->
+<!-- Cargar Supabase PRIMERO -->
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 <script>
-  // CONFIGURACIÓN - TUS CLAVES
-  const SUPABASE_URL = 'https://zpseipfypcxktbbrbkiq.supabase.co';
-  const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpwc2VpcGZ5cGN4a3RiYnJia2lxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NDk4MzIsImV4cCI6MjA5NjUyNTgzMn0.RDrY9_gnSqsZgnaWx0FF6gHHNG8ry--ETmAmCHAN024';
-  
-  async function loginConGoogle() {
-    await supabase.auth.signInWithOAuth({
-      provider: 'google',
-      options: { redirectTo: window.location.href }
-    });
-  }
-  
-  async function logout() {
-    await supabase.auth.signOut();
-    window.location.reload();
-  }
-  
-  async function checkUser() {
-    const { data: { user } } = await supabase.auth.getUser();
-    const container = document.getElementById('login-container');
-    const userSpan = document.getElementById('usuario-nombre');
+  // ESPERAR a que la librería cargue completamente
+  document.addEventListener('DOMContentLoaded', function() {
     
-    if (user) {
-      if (userSpan) userSpan.textContent = user.email;
-      if (container) {
-        container.innerHTML = `<button onclick="logout()" style="background:#dc2626;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer">Cerrar sesión: ${user.email}</button>`;
-      }
-    } else {
-      if (container) {
-        container.innerHTML = `<button onclick="loginConGoogle()" style="background:#4285F4;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;font-size:14px">🚀 Iniciar sesión con Google</button>`;
+    // Tu configuración
+    const SUPABASE_URL = 'https://zpseipfypcxktbbrbkiq.supabase.co';
+    const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpwc2VpcGZ5cGN4a3RiYnJia2lxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA5NDk4MzIsImV4cCI6MjA5NjUyNTgzMn0.RDrY9_gnSqsZgnaWx0FF6gHHNG8ry--ETmAmCHAN024';
+    
+    // Crear el cliente
+    const supabase = supabaseJs.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    
+    // Funciones de login
+    window.loginConGoogle = async function() {
+      await supabase.auth.signInWithOAuth({
+        provider: 'google',
+        options: { redirectTo: window.location.href }
+      });
+    };
+    
+    window.logout = async function() {
+      await supabase.auth.signOut();
+      window.location.reload();
+    };
+    
+    // Verificar usuario
+    async function checkUser() {
+      const { data: { user } } = await supabase.auth.getUser();
+      const container = document.getElementById('login-container');
+      const userSpan = document.getElementById('usuario-nombre');
+      
+      if (user) {
+        if (userSpan) userSpan.textContent = user.email;
+        if (container) {
+          container.innerHTML = `<button onclick="logout()" style="background:#dc2626;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer">Cerrar sesión</button>`;
+        }
+        console.log('✅ Usuario conectado:', user.email);
+      } else {
+        if (container) {
+          container.innerHTML = `<button onclick="loginConGoogle()" style="background:#4285F4;color:white;border:none;padding:8px 16px;border-radius:5px;cursor:pointer;font-size:14px">🚀 Iniciar sesión con Google</button>`;
+        }
+        console.log('❌ Usuario no conectado');
       }
     }
-  }
-  
-  document.addEventListener('DOMContentLoaded', checkUser);
-  window.loginConGoogle = loginConGoogle;
-  window.logout = logout;
+    
+    // Ejecutar
+    checkUser();
+    
+  });
 </script>
 
 <!-- CONTENEDOR DEL LOGIN -->
